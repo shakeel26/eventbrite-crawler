@@ -1,0 +1,23 @@
+prefixes:
+  schema: "http://schema.org/"
+  myfunc: "http://myfunc.com/"
+mappings:
+  event:
+    sources:
+      - ['input~jsonpath', '$.events[*]']
+    s: http://example.com/$(name.text)
+    po:
+      - [a, schema:Event]
+      - [schema:name, $(name.text)]
+      - [schema:description, $(description.text)]
+      - [schema:url, $(url)]
+      - [schema:startDate, $(start.utc)]
+      - [schema:endDate, $(end.utc)]
+      - [schema:offers, {mapping: offers, join: [id, id]}]
+  offers:
+    sources:
+      - ['input~jsonpath', '$.events[*]']
+    po:
+      - [a, schema:Offer]
+      - [schema:priceCurrency, $(currency)]
+      - [schema:foo, $(id)]
