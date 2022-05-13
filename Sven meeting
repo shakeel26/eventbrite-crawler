@@ -1,0 +1,30 @@
+Multiple sources or one?
+
+wikidata,
+dbpedia,
+gkg,
+eventbrite,
+couchsurfing,
+
+0 - 3 sources ,
+1 - define dimensions and matrics,
+2 - assement after mapping
+
+4 - Last - best source will be merges into German-TGK
+
+What if datasource if OFFline ? CSV
+CSV offline will be created as KG in localhost ? yes,
+then we do the assessment
+then best
+merge into German KG
+
+semantic validity:
+1 - formal , 2 - open world(call everyone)
+we use formal approach
+coordinates approx with country
+
+
+next class:
+
+assessment results for all sources
+
